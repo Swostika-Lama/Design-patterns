@@ -1,18 +1,24 @@
 package Factory_method.RPG_Map_Generator;
 
 public class Game {
-    private TileType tileType;
-
-    public Game(TileType tileType){
-        this.tileType = tileType;
+    public static Map createMap(String tileType, int breadth, int length){
+        if (tileType.equalsIgnoreCase("city")) {
+            return new CityMap(breadth, length);
+        } else if (tileType.equalsIgnoreCase("wilderness")){
+            return new WildernessMap(breadth, length);
+        } else {
+            throw new IllegalArgumentException("unknown map type" + tileType);
+        }
     }
 
-    public void main(){
+    public static void main(String[] args){
+        Map map = createMap("city", 5,12);
+        map.display();
 
-    }
+        System.out.println("------------");
 
-    public void createMap(){
-
+        Map map2 = createMap("wilderness", 4, 9);
+        map2.display();
     }
 }
 
