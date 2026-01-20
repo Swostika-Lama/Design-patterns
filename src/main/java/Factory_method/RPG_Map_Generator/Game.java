@@ -12,12 +12,12 @@ public class Game {
     }
 
     public static void main(String[] args){
-        Map map = createMap("city", 5,12);
+        Map map = createMap("city", 2,3);
         map.display();
 
         System.out.println("------------");
 
-        Map map2 = createMap("wilderness", 4, 9);
+        Map map2 = createMap("wilderness", 2, 3);
         map2.display();
     }
 }

@@ -5,9 +5,6 @@ public class ForestTile extends Tile {
         super(TileType.FOREST);
     }
 
-    @Override
-    public void getAction(){
-        System.out.println("You are at the forest");
-    }
+
 
 }
