@@ -13,7 +13,7 @@ public class Main {
         remote.volumeUp();
 
         smartTV.printStatus();
-        ((SmartTv) smartTV).browseInternet("youtube.com");
+        ((SmartTv) smartTV).browseInternet("Netflix.com");
         remote.voiceControl("Play music");
     }
 }
