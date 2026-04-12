@@ -5,28 +5,28 @@ public abstract class Map {
     protected int length;
     protected Tile[][] tiles;
 
-
-    //creating tile
     public Map(int breadth, int length){
         this.breadth = breadth;
         this.length = length;
-        tiles = new Tile [length][breadth];
+        tiles = new Tile[length][breadth];
+    }
+
+    // REQUIRED for Flyweight
+    public Tile[][] getTiles() {
+        return tiles;
     }
 
     protected abstract Tile createTile();
-    //display the map
+
     public void display(){
         for(int i=0; i<length; i++){
-            for(int j =0 ; j<breadth; j++){
-                //create tile if not exist
+            for(int j = 0; j < breadth; j++){
                 if(tiles[i][j] == null){
                     tiles[i][j] = createTile();
                 }
-
-                System.out.print(tiles[i][j].getCharacter()+ "");
+                System.out.print(tiles[i][j].getCharacter());
             }
             System.out.println();
         }
     }
-
 }

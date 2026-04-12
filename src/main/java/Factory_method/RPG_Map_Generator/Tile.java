@@ -12,6 +12,9 @@ public abstract class Tile {
     public String getType(){
         return tileType.getType();
     }
+    public TileType getTileType() {
+        return tileType;
+    }
     public void getAction(){
 //        for later implementation
 
