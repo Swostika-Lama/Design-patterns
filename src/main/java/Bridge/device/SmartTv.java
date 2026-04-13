@@ -4,17 +4,14 @@ public class SmartTv implements Device {
     private boolean on = false;
     private int volume = 20;
     private int channel = 1;
-
     @Override
     public boolean isEnabled() {
         return on;
     }
-
     @Override
     public void enable() {
         on = true;
     }
-
     @Override
     public void disable() {
         on = false;
@@ -44,7 +41,6 @@ public class SmartTv implements Device {
         System.out.println("| Current channel is " + channel);
         System.out.println("------------------------------------\n");
     }
-
      public void browseInternet(String website) {
         System.out.println("Browsing the internet on Smart TV..." + "\n"+ website);
     }
